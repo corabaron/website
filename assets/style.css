@@ -4,8 +4,8 @@
   --ink:#1d2321;
   --ink-2:#4a524e;
   --line:#ddd4c4;
-  --accent:#5b3a7e;
-  --accent-2:#8f4fa3;
+  --accent:#574c69;
+  --accent-2:#7a6d8c;
   --serif:"Newsreader",Georgia,"Times New Roman",serif;
   --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --max:1120px;
@@ -118,13 +118,18 @@ blockquote{break-inside:avoid;margin:0 0 28px;font-family:var(--serif);font-size
 .resource-list p{margin:4px 0 0;color:var(--ink-2)}
 
 /* photography */
-.trip{padding-top:72px}
 .trip header{max-width:680px;margin-bottom:28px}
 .meta{font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--accent-2)}
-.photo-grid{columns:3;column-gap:14px}
-.ph{display:block;width:100%;padding:0;border:0;background:var(--paper-2);margin:0 0 14px;cursor:zoom-in;break-inside:avoid;border-radius:3px;overflow:hidden}
-.ph img{width:100%;transition:transform .4s ease}
-.ph:hover img{transform:scale(1.02)}
+.photo-grid{--h:300px;--g:18px;display:flex;flex-wrap:wrap;gap:var(--g)}
+.photo-grid.js{display:block}
+.ph-row{display:flex;gap:var(--g);margin:0 auto var(--g)}
+.ph-row .ph{flex:var(--ar) 1 0;min-width:0}
+.photo-grid::after{content:"";flex-grow:999999}
+.ph{flex:calc(var(--ar) * 100) 1 calc(var(--ar) * var(--h));display:block;padding:0;border:0;background:var(--paper-2);cursor:zoom-in;border-radius:3px;overflow:hidden}
+.ph img{width:100%;height:auto;aspect-ratio:var(--ar);object-fit:cover;transition:transform .5s ease}
+.ph:hover img{transform:scale(1.015)}
+.trip{padding-top:88px}
+.trip header{margin-bottom:32px}
 main>section.trip:last-of-type{padding-bottom:96px}
 .lightbox{border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;width:100vw;height:100vh}
 .lightbox::backdrop{background:rgba(20,22,21,.94)}
@@ -156,7 +161,8 @@ main>section.trip:last-of-type{padding-bottom:96px}
   .project img{aspect-ratio:16/10}
   .gallery-3{grid-template-columns:1fr}
   .qpanel{columns:1}
-  .photo-grid{columns:2}
+  .photo-grid{--h:170px;--g:10px}
+  .trip{padding-top:56px}
   .page-head{padding-top:44px}
   .footer-links{text-align:left}
   .resource-list li{flex-direction:column;align-items:flex-start}
