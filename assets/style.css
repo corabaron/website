@@ -4,8 +4,8 @@
   --ink:#1d2321;
   --ink-2:#4a524e;
   --line:#ddd4c4;
-  --accent:#2f5a4f;
-  --accent-2:#b4583a;
+  --accent:#5b3a7e;
+  --accent-2:#8f4fa3;
   --serif:"Newsreader",Georgia,"Times New Roman",serif;
   --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --max:1120px;
@@ -81,7 +81,7 @@ figcaption{font-size:.88rem;color:var(--ink-2);margin-top:10px;line-height:1.5}
 .project.flip{grid-template-columns:7fr 5fr}
 .project.flip figure{order:2}
 .project figure{position:sticky;top:96px}
-.project img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px;background:var(--paper-2)}
+.project img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;background:var(--paper-2)}
 .num{font-family:var(--serif);font-style:italic;color:var(--accent-2);font-size:1.1rem;margin-bottom:6px}
 
 /* refs */
